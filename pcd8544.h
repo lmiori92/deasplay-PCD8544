@@ -30,6 +30,8 @@
 #define HAS_CHARACTER_INTERFACE
 #define HAS_BITMAP_INTERFACE
 #define HAS_BITMAP
+/** This driver requires taxibus */
+#define TAXIBUS_REQUIRED
 
 #define PCD8544_PIN_DC                      (0U)
 #define PCD8544_PIN_CE                      (1U)
