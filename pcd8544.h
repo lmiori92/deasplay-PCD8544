@@ -29,6 +29,7 @@
 /* Enable library features */
 #define HAS_CHARACTER_INTERFACE
 #define HAS_BITMAP_INTERFACE
+#define HAS_BITMAP
 
 #define PCD8544_PIN_DC                      (0U)
 #define PCD8544_PIN_CE                      (1U)
@@ -40,5 +41,14 @@ void PCD8544_display_hal_set_cursor(uint8_t line, uint8_t chr);
 void PCD8544_display_hal_cursor_visibility(bool visible);
 void PCD8544_set_extended(uint8_t id, uint8_t *data, uint8_t len);
 void display_hal_write_buffer(uint8_t x_rect, uint8_t y_rect);
+
+/* bindings */
+#define deasplay_hal_init               pcd8544_display_hal_init
+#define deasplay_hal_power              pcd8544_display_hal_power
+#define deasplay_hal_set_cursor         pcd8544_display_hal_set_cursor
+#define deasplay_hal_write_char         pcd8544_display_hal_write_char
+#define deasplay_hal_cursor_visibility  pcd8544_display_hal_cursor_visibility
+#define deasplay_hal_write_extended     pcd8544_write_extended
+#define deasplay_hal_set_extended       pcd8544_set_extended
 
 #endif /* DRIVER_PCD8544_PCD8544_H_ */
