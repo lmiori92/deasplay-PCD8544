@@ -23,14 +23,13 @@
  * @brief Display HAL to interface the APIs to the PCD8544 LED display
  */
 
-#include "../../deasplay.h"
-
+#include "deasplay/deasplay.h"
 #include "taxibus/interface.h"
 #include "taxibus/pin.h"
 
 #ifdef DEASPLAY_PCD8544
 
-#include <deasplay/driver/PCD8544/pcd8544.h>
+#include "pcd8544.h"
 
 /** Lines * Rows / 8. 8bits per 8 pixels... */
 #define DISPLAY_BUFFER_SIZE (((DEASPLAY_CHARS * DEASPLAY_LINES) / 8U))
